@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>home page</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body class="background">
+        <div class="top">
+            <img src="logo.png" width="80px" height="80px" class="img">
+            <h1 class="txt" >BʅσɠGE</h1>
+            <a href="https://www.facebook.com/">
+            <img src="face.jpg" width="40px" height="40px" class="img2">
+            </a>
+            <a href="https://www.instagram.com/accounts/login/">
+                <img src="instag.jpg" width="40px" height="40px" class="img3">
+                </a>
+                <a href="https://id.xap.rocks/Account/Login">
+                    <img src="xapp.webp" width="40px" height="40px" class="img4">
+                    </a>
+                 <a href="help.com">  <h3 class="h3"> Help?</h3></a>
+                 
+                 
+                  <button id ="login" name="login" class="btn">𝕃𝕆𝔾𝕀ℕ</button>
+        </div>
+        <div class="second">
+            
+            <img src="bloglap.jpg" width="200px"height="100px"class="img5"><br><br><br><br>
+            <h1 >Creative Space|BʅσɠGE</h1>
+            <h3 class="text">𝕰𝖝𝖕𝖑𝖔𝖗𝖊 𝖙𝖍𝖊 𝖎𝖓𝖙𝖊𝖗𝖘𝖊𝖈𝖙𝖎𝖔𝖓 𝖔𝖋 𝖙𝖊𝖈𝖍𝖓𝖔𝖑𝖔𝖌𝖞 𝖆𝖓𝖉 𝖊𝖛𝖊𝖗𝖞𝖉𝖆𝖞 𝖑𝖎𝖛𝖎𝖓𝖌 𝖆𝖑𝖔𝖓𝖌𝖘𝖎𝖉𝖊 𝖙𝖎𝖕𝖘 𝖋𝖔𝖗 𝖈𝖚𝖑𝖙𝖎𝖛𝖆𝖙𝖎𝖓𝖌 𝖆 𝖍𝖆𝖗𝖒𝖔𝖓𝖎𝖔𝖚𝖘 𝖍𝖔𝖒𝖊 𝖆𝖓𝖉 𝖍𝖊𝖆𝖗𝖙𝖜𝖆𝖗𝖒𝖎𝖓𝖌 𝖗𝖊𝖑𝖆𝖙𝖎𝖔𝖓𝖘𝖍𝖎𝖕𝖘.</h3>
+            <h6 class="text2">Refresh for the latestblog updates</h6>
+            </div>
+       
+    <div class="latestBlogs">
+        <% latestBlogs.forEach(blog => { %>
+            <div class="blog1">
+                
+                <% if (blog.imagePath) { %>
+                    <img  class="bimg"  src="<%= blog.imagePath %>" alt="Blog Image" >
+                <% } %>
+                <h2 class="sizein"><a href="/author/<%= blog.authorname %>" class="href"><%= blog.blogname %></a></h2><br>
+                <h6 >◘<%= blog.authorname %></h6><br><br> <h6 >◘<%= blog.blogtype %></h6>
+                
+            </div>
+        <% }); %>
+    </div>
+   
+        
+    </body>
+    <script>
+        var btn= document.getElementById("login");
+        btn.addEventListener("click",function(event){
+            window.location.href="login.html";
+        });
+    </script>
+</html>

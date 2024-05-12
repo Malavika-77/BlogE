@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>profile page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="back">
+    <div class="profhead">
+        <img src="logo.png" width="80px" height="80px" class="img">
+        <h1 class="txt">BʅσɠGE</h1>
+    </div>
+
+    <div class="details">
+        
+            <img type="file" id="profileImage" src="" alt="Profile Image" width="560px" height="500px">
+
+          
+
+
+      
+    </div>
+
+    
+    <div class="details2">
+        <h1 class="author" id="username"><%= authorname %></h1>
+        <h2 class="about" id="about1"><%= about1 %></h2>
+        <h3 class="about2" id="about2"><%= about2 %></h3>
+       
+                
+            <button class="btn3" id="btn3" name="btn3">CREATE BLOG</button>
+                
+            </div>
+            
+           
+        </div>
+        <form id="form" method="get" action="/myblogs">
+        <div class="smallarea2">
+            <input type="text" name="authorname" value="<%= authorname %>" class="tst2">
+            <button class="newbtn" id="newbtn" name="newbtn">MY BLOGS</button>
+        </div>
+    </form>
+        <div class="smallarea3">
+            <!-- Even older blogs will be moved here dynamically -->
+        </div>
+    </div>
+    <div class="blog" id="blog"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const imagePath = "<%= imagePath %>";
+    const profileImage = document.getElementById("profileImage");
+    profileImage.src = imagePath;
+
+
+    
+
+    
+    const btn = document.getElementById("btn3");
+    btn.addEventListener("click", function (event) {
+        window.location.href = "/createblog.html";
+    });
+   
+});
+   
+
+   
+
+
+   
+    </script>
+</body>
+</html>

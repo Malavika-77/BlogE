@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Blogs</title>
+    <style>
+        .maindiv1 {
+            position: absolute;
+            width: 700px;
+            height: auto;
+            padding: 100px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            background-color: rgb(222, 222, 232);
+            left: 20px;
+            color: #0b0d0e;
+            top: 20px;
+        }
+        .blogwrite {
+            text-align: justify;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        .background4 {
+            background-image: url(AUTUMN.jpg);
+            background-size: cover;
+            background-color:oldlace
+        }
+        .head{
+                    position: absolute;
+                    left:1000px;
+                    bottom: 280px;
+                    color: #e437bc;
+                    
+                   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;}
+                   
+    </style>
+</head>
+<body class="background4">
+
+    <h2 class="head">░▒▓█►─═  Ｍ𝐲 ᗷ𝐥ᵒ𝓖𝕤 ═─◄█▓▒░</h2>
+
+    <div id="blogList" class="maindiv1">
+        <!-- Blog posts will be dynamically added here -->
+        <% blogs.forEach(blog => { %>
+            <div class="blogDiv">
+                <h2>Blog Name: <%= blog.blogname %></h2>
+                <p> <%= blog.authorname %></p>
+                <p>Blog Type: <%= blog.blogtype %></p>
+                <% if (blog.imagePath) { %>
+                    <img src="<%= blog.imagePath %>" alt="Blog Image" width="600px" height="200px">
+                <% } %>
+                <p class="blogwrite"> <%= blog.write %></p>
+            </div>
+        <% }); %>
+    </div>
+
+</body>
+</html>
